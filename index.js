@@ -21,7 +21,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: "What is the name of your GitHub repo?",
+        message: "What's the name of your GitHub repo?",
         name: 'repo',
         default: 'readme-generator',
         validate: function (answer) {
@@ -33,7 +33,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: "What is the title of your project?",
+        message: "What's the title of your project?",
         name: 'title',
         default: 'Project Title',
         validate: function (answer) {
@@ -57,7 +57,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: "If applicable, describe the steps required to install your project for the Installation section.",
+        message: "If applicable, what steps are required to install your project for the Installation section.",
         name: 'installation'
     },
     {
