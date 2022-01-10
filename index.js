@@ -95,7 +95,23 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    try {
+        //inquirer prompts
+        const userResponses = await inquirer.prompt(questions);
+        console.log("Thank you for your responses!");
+
+        console.log("Generating your README next...")
+        const markdown = generateMarkdown(userResponses, userInfo);
+        console.log(markdown);
+
+        // Write markdown to file
+        await writeFileAsync('ExampleREADME.md', markdown);
+
+        } catch (error) {
+            console.log(error);
+    }
+};
 
 // Function call to initialize app
 init();
