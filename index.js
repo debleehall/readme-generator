@@ -10,23 +10,21 @@ const questions = () => {
     {
         type: 'input',
         message: "What is your GitHub username?",
-        name: 'username',
-        default: 'connientran-dev',
+        name: 'github',
         validate: function (answer) {
             if (answer.length < 1) {
-                return console.log("A valid GitHub username is required.");
+                return console.log("Please enter a valid GitHub username.");
             }
             return true;
         }
     },
     {
         type: 'input',
-        message: "What's the name of your GitHub repo?",
-        name: 'repo',
-        default: 'readme-generator',
+        message: "What's your email address?",
+        name: 'email',
         validate: function (answer) {
             if (answer.length < 1) {
-                return console.log("A valid GitHub repo is required for a badge.");
+                return console.log("Please enter your email.");
             }
             return true;
         }
@@ -35,10 +33,9 @@ const questions = () => {
         type: 'input',
         message: "What's the title of your project?",
         name: 'title',
-        default: 'Project Title',
         validate: function (answer) {
             if (answer.length < 1) {
-                return console.log("A valid project title is required.");
+                return console.log("Please enter a project name.");
             }
             return true;
         }
@@ -50,7 +47,7 @@ const questions = () => {
         default: 'Project Description',
         validate: function (answer) {
             if (answer.length < 1) {
-                return console.log("A valid project description is required.");
+                return console.log("Please enter a description.");
             }
             return true;
         }
@@ -58,7 +55,7 @@ const questions = () => {
     {
         type: 'input',
         message: "If applicable, what steps are required to install your project for the Installation section.",
-        name: 'installation'
+        name: 'install'
     },
     {
         type: 'input',
@@ -68,17 +65,18 @@ const questions = () => {
     {
         type: 'input',
         message: "If applicable, provide guidelines on how other developers can contribute to your project.",
-        name: 'contributing'
+        name: 'contributors'
     },
     {
         type: 'input',
         message: "If applicable, provide any tests written for your application and provide examples on how to run them.",
-        name: 'tests'
+        name: 'test'
     },
     {
         type: 'list',
         message: "Choose a license for your project.",
-        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
+        choices: ['MIT', 'GNU'],
+        default: ['MIT'],
         name: 'license'
     }
     ]);
