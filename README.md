@@ -15,7 +15,7 @@
   The user will need to clone the repository and download Node, The application also requires inquirer.
 
   ## Usage 
-  Use inquirer from the command line and answer questions about your project.
+  Use inquirer from the command line and answer questions about your project. Watch how it works! https://watch.screencastify.com/v/QWhnmq30kPVytbrYHJPy
 
   ## License 
   This project is license under MIT
